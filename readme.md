@@ -1,19 +1,24 @@
 # PIG model
 This repository contains key files and description of the PIG model proposed in the paper. 
 
+An, L., Ren, J., Yu, T., Hai, T., Jia, Y., &Liu, Y. Three-dimensional surface motion capture of multiple freely moving pigs using MAMMAL. *biorxiv* (2022).
+
+[ [project]() ] [ [paper]() ]
+
 Currently, this model only contains a fix shape, i.e. there is no shape blend shape parameter or pose blend shape parameter. 
 
-<img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 80%;"
-    src="pics/model.jpg" 
-    alt="">
-</img>
+![](pics/model.jpg)
 
-# Contents 
-## core_txt_files folder 
+Other related repositories: 
+* [MAMMAL_core]() 
+* [MAMMAL_evaluation](https://github.com/anl13/MAMMAL_evaluation) 
+* [MAMMAL_behavior](https://github.com/anl13/MAMMAL_behavior) 
+* [pig_silhouette_det](https://github.com/anl13/pig_silhouette_det)
+* [pig_pose_det](https://github.com/anl13/pig_pose_det)
+* [MAMMAL_datasets](https://github.com/anl13/MAMMAL_datasets) 
+
+## Contents 
+### core_txt_files folder 
 This folder contains txt files which are the core of the PIG model. 
 
 `vertices.txt`: 11239 * 3 float matrix, T-pose (or rest pose) position of all the vertices. 
@@ -23,7 +28,7 @@ This folder contains txt files which are the core of the PIG model.
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
-           width: 70%;"
+           width: 100%;"
     src="pics/Joints.jpg" 
     alt="">
 </img>
@@ -31,7 +36,7 @@ This folder contains txt files which are the core of the PIG model.
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
-           width: 70%;"
+           width: 100%;"
     src="pics/Jointnames.jpg" 
     alt="">
 </img>
@@ -49,7 +54,7 @@ This folder contains txt files which are the core of the PIG model.
 
 `faces_tex.txt`: 22446 * 3 integer matrix. Also the surface triangles, yet each number is texture index (start from 0). The face order is the same to `faces_ver.txt`. 
 
-## full_txt_files folder 
+### full_txt_files folder 
 This folder contains several additional files showing some other useful features of the PIG model. It also contains two `.obj` files showing the PIG model (`PIG.obj`) and a coarse PIG model (`PIG_reduced.obj`). These `.obj` files can be opened with [MeshLab](https://www.meshlab.net/), Maya, Blender or other graphics softwares. 
 
 `body_parts.txt`: 11239 integer numbers indicating which high-level body part a vertex belongs to. The body part order is defined in `body_part_defs.txt`. We defined 12 body parts, indexed from 1, so we set the 0 body part with name `NOT_BODY`. 
@@ -60,10 +65,27 @@ This folder contains several additional files showing some other useful features
 
 `sym.txt`: 11239 integer numbers. The i-th number indicate that vertex index which is symmetric to i-th vertex with respect to the x-axis. 
 
-## pkl_files folder 
+### pkl_files folder 
 `PIG_core.pkl` contains the dict of PIG parameters same to `core_txt_files`.
 
 `PIG_full.pkl` contains the dict of PIG parameters same to `full_txt_files`. 
 
-# Dependencies
+## Dependencies
 To run the code here, the following packages should be installed: `numpy`, `scipy`. 
+
+## Citation 
+If you use this code in your research, please cite the paper
+
+```
+@article{MAMMAL, 
+    author = {An, Liang and Ren, Jilong and Yu, Tao and Jia, Yichang and Liu, Yebin},
+    title = {Three-dimensional surface motion capture of multiple freely moving pigs using MAMMAL},
+    booktitle = {biorxiv},
+    month = {July},
+    year = {2022}
+}
+```
+
+## Contact
+* Liang An ([anl13@mail.tsinghua.org.cn](anl13@mail.tsinghua.org.cn))
+* Yebin Liu ([liuyebin@mail.tsinghua.edu.cn](liuyebin@mail.tsinghua.edu.cn))
