@@ -6,7 +6,7 @@ from scipy.sparse import csc_matrix
 
 def combine_pickle():
     # read core data
-    folder = "H:/examples/PIG_model/full_txt_files/"
+    folder = "./full_txt_files/"
     faces_vert = np.loadtxt(folder + "faces_vert.txt").astype(np.int64)
     faces_tex = np.loadtxt(folder + "faces_tex.txt").astype(np.int64)
     parents = np.loadtxt(folder + "parents.txt").astype(np.int64).squeeze()
@@ -60,10 +60,7 @@ def combine_pickle():
         "R_F_LEG",
         "L_B_LEG",
         "R_B_LEG",
-        "TAIL",
-        "JAW",
-        "NECK",
-        "OTHERS"
+        "TAIL"
     ]
     data_dict.update({
         "body_parts": body_parts, 
