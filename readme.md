@@ -1,7 +1,8 @@
 # PIG model
-This repository contains key files and description of the PIG model proposed in the paper _Three-dimensional surface motion capture of multiple freely moving pigs using MAMMAL_ (not available yet). It is a [SMPL](https://smpl.is.tue.mpg.de/)/[SMAL](https://smal.is.tue.mpg.de/)-like skinning model yet without shape-blend-shape or pose-blend-shape. However, it still provides the **first** skinning model for pigs, which is an important complement for existing shape models. This model is built upon the observations of Guangxi Bama mini-pig, which is widely used for disease modeling. 
+This repository contains key files and description of the PIG model proposed in the paper _Three-dimensional surface motion capture of multiple freely moving pigs using MAMMAL_ (not available yet). It is a part of [MAMMAL](https://github.com/anl13/MAMMAL_core) project.  It is a [SMPL](https://smpl.is.tue.mpg.de/)/[SMAL](https://smal.is.tue.mpg.de/)-like skinning model yet without shape-blend-shape or pose-blend-shape. However, it still provides the **first** skinning model for pigs, which is an important complement for existing shape models. This model is built upon the observations of Guangxi Bama mini-pig, which is widely used for disease modeling. 
 
 ![](pics/model.jpg)
+
 
 ## TODO 
 - [ ] Provide `.fbx` file. 
