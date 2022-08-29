@@ -1,21 +1,10 @@
 # PIG model
-This repository contains key files and description of the PIG model proposed in the paper. 
-
-An, L., Ren, J., Yu, T., Hai, T., Jia, Y., &Liu, Y. Three-dimensional surface motion capture of multiple freely moving pigs using MAMMAL. *biorxiv* (2022).
-
-[ [project]() ] [ [paper]() ]
-
-Currently, this model only contains a fix shape, i.e. there is no shape blend shape parameter or pose blend shape parameter. 
+This repository contains key files and description of the PIG model proposed in the paper _Three-dimensional surface motion capture of multiple freely moving pigs using MAMMAL_ (not available yet). It is a [SMPL](https://smpl.is.tue.mpg.de/)/[SMAL](https://smal.is.tue.mpg.de/)-like skinning model yet without shape-blend-shape or pose-blend-shape. However, it still provides the **first** skinning model for pigs, which is an important complement for existing shape models. This model is built upon the observations of Guangxi Bama mini-pig, which is widely used for disease modeling. 
 
 ![](pics/model.jpg)
 
-Other related repositories: 
-* [MAMMAL_core]() 
-* [MAMMAL_evaluation](https://github.com/anl13/MAMMAL_evaluation) 
-* [MAMMAL_behavior](https://github.com/anl13/MAMMAL_behavior) 
-* [pig_silhouette_det](https://github.com/anl13/pig_silhouette_det)
-* [pig_pose_det](https://github.com/anl13/pig_pose_det)
-* [MAMMAL_datasets](https://github.com/anl13/MAMMAL_datasets) 
+## TODO 
+- [ ] Provide `.fbx` file. 
 
 ## Contents 
 ### core_txt_files folder 
@@ -52,7 +41,7 @@ This folder contains txt files which are the core of the PIG model.
 
 `faces_vert.txt`: 22446 * 3 integer matrix. Means the surface triangles. Each number is vertex index (start from 0). 
 
-`faces_tex.txt`: 22446 * 3 integer matrix. Also the surface triangles, yet each number is texture index (start from 0). The face order is the same to `faces_ver.txt`. 
+`faces_tex.txt`: 22446 * 3 integer matrix. Also the surface triangles, yet each number is texture index (start from 0). The face order is the same to `faces_vert.txt`. 
 
 ### full_txt_files folder 
 This folder contains several additional files showing some other useful features of the PIG model. It also contains two `.obj` files showing the PIG model (`PIG.obj`) and a coarse PIG model (`PIG_reduced.obj`). These `.obj` files can be opened with [MeshLab](https://www.meshlab.net/), Maya, Blender or other graphics softwares. 
@@ -78,14 +67,10 @@ If you use this code in your research, please cite the paper
 
 ```
 @article{MAMMAL, 
-    author = {An, Liang and Ren, Jilong and Yu, Tao and Jia, Yichang and Liu, Yebin},
+    author = {An, Liang and Ren, Jilong and Yu, Tao and Hai, Tang and Jia, Yichang and Liu, Yebin},
     title = {Three-dimensional surface motion capture of multiple freely moving pigs using MAMMAL},
-    booktitle = {biorxiv},
+    booktitle = {},
     month = {July},
     year = {2022}
 }
 ```
-
-## Contact
-* Liang An ([anl13@mail.tsinghua.org.cn](anl13@mail.tsinghua.org.cn))
-* Yebin Liu ([liuyebin@mail.tsinghua.edu.cn](liuyebin@mail.tsinghua.edu.cn))
